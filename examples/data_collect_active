@@ -132,8 +132,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--save_root', '-s', default='benchbot_data_active', help='Location of the root folder where data will be stored')
     args = parser.parse_args()
-    print(args)
-    sys.exit()
+
     # Run BenchBot
     benchbot_inst = BenchBot(agent=DataCollectInteractiveAgent(args.save_root))
     benchbot_inst.agent.set_env(benchbot_inst.config['environments'][0])
